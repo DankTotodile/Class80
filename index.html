@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>SUp</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <center>
+        <h1>List of the students in my class</h1>
+        <span>1</span><input id="s1" placeholder="Enter Name"><br>
+        <span>2</span><input id="s2" placeholder="Enter Name"><br>
+        <span>3</span><input id="s3" placeholder="Enter Name"><br>
+        <span>4</span><input id="s4" placeholder="Enter Name"><br>
+        <h3 id="sl1"></h3><br>
+        <h3 id="sl2"></h3><br>
+        <button id="sb" onclick="sub()">Submit</button>
+        <br>
+        <button id="sr" onclick="sor()">Sort</button>
+        </center>
+    </body>
+    <script>
+      var sname = []
+      var darray = []
+      function sub()
+      {
+          for (var i=1; i<=4; i++) 
+          {
+            var n = document.getElementById("s"+ i).value;
+            sname.push(n);
+            console.log(sname);
+          }
+          for (var j=0; j<sname.length; j++)
+          {
+            darray.push("<h4>Name - " + sname[j] + "</h4>");
+            console.log(darray);
+          }
+          console.log(darray);
+          document.getElementById("sl1").innerHTML = darray;
+          document.getElementById("sl2").innerHTML = darray.join(" ");
+          document.getElementById("sb").style.display = "none";
+          document.getElementById("sr").style.display = "inline";
+      }
+      function sor()
+      {
+      darray.sort()
+      document.getElementById("sl2").innerHTML = darray.join(" ");
+      }
+    </script>
+</html>

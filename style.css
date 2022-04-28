@@ -1,0 +1,22 @@
+#sr
+{
+display: none;
+}
+input
+{
+ margin: 10px;
+}
+#sl1
+{
+    border: 2px solid red;
+    width: 200px;
+    padding: 10px;
+    background-color: antiquewhite;
+}
+#sl2
+{
+    border: 2px solid lightblue;
+    width: 200px;
+    padding: 10px;
+    background-color: antiquewhite;
+}
